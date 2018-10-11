@@ -190,7 +190,7 @@ for i in Dictionary_of_Bigrams_first.keys():
 for i in Dictionary_of_Bigrams_first.keys():
 	if Dictionary_of_Bigrams_first[i]!=0:
 		entropy -=(Dictionary_of_Bigrams_first[i]/quantity)*math.log2(Dictionary_of_Bigrams_first[i]/quantity)
-entropy_dict['entropy_of_Bigrams_first']=entropy
+entropy_dict['entropy_of_Bigrams_first']=0.5*entropy
 
 entropy=0
 quantity=0
@@ -199,7 +199,7 @@ for i in Dictionary_of_Bigrams_second.keys():
 for i in Dictionary_of_Bigrams_second.keys():
 	if Dictionary_of_Bigrams_second[i]!=0:
 		entropy -=(Dictionary_of_Bigrams_second[i]/quantity)*math.log2(Dictionary_of_Bigrams_second[i]/quantity)
-entropy_dict['entropy_of_Bigrams_second']=entropy
+entropy_dict['entropy_of_Bigrams_second']=0.5*entropy
 
 entropy=0
 quantity=0
@@ -208,7 +208,7 @@ for i in Dictionary_of_Bigrams_with_spaces_first.keys():
 for i in Dictionary_of_Bigrams_with_spaces_first.keys():
 	if Dictionary_of_Bigrams_with_spaces_first[i]!=0:
 		entropy -=(Dictionary_of_Bigrams_with_spaces_first[i]/quantity)*math.log2(Dictionary_of_Bigrams_with_spaces_first[i]/quantity)
-entropy_dict['entropy_of_Bigrams_with_spaces_first']=entropy
+entropy_dict['entropy_of_Bigrams_with_spaces_first']=0.5*entropy
 
 entropy=0
 quantity=0
@@ -217,7 +217,7 @@ for i in Dictionary_of_Bigrams_with_spaces_second.keys():
 for i in Dictionary_of_Bigrams_with_spaces_second.keys():
 	if Dictionary_of_Bigrams_with_spaces_second[i]!=0:
 		entropy -=(Dictionary_of_Bigrams_with_spaces_second[i]/quantity)*math.log2(Dictionary_of_Bigrams_with_spaces_second[i]/quantity)
-entropy_dict['entropy_of_Bigrams_with_spaces_second']=entropy
+entropy_dict['entropy_of_Bigrams_with_spaces_second']=0.5*entropy
 
 for i in entropy_dict.keys():
 	print(i+":   "+str(entropy_dict[i]))
